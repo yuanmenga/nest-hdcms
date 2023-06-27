@@ -1,0 +1,12 @@
+//vscode的配置文件
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json,README.md,*.json,*.js,.gitignore,.prettierrc",
+    ".env": ".env,.env.example"
+  },
+  "files.exclude": {
+    "node_modules": true,
+    "test": true
+  }
+}

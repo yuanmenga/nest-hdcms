@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+model User {
+  id Int @id @default(autoincrement())//主键，默认自增
+  name String
+  password String
+  email String?//允许设置为空
+  mobile String?
+  createTime DateTime @default(now())//日期类型，默认时间为当前时间
+  updateTime DateTime @updatedAt//自动设置当前时间
+}
